@@ -26,7 +26,7 @@ Two interchangeable credentials, both sent as the API key:
 1. **Login session** — `npx @21st-dev/cli login` opens the browser and saves a
    token to `~/.config/21st/auth.json`. Best for interactive/dev machines.
 2. **API key** — `21st_sk_…` from **https://21st.dev/mcp** (or
-   `/studio/<username>/api-keys`). Pass via `--api-key <key>` or the
+   **https://21st.dev/settings/api-keys**). Pass via `--api-key <key>` or the
    `TWENTYFIRST_TOKEN` / `API_KEY_21ST` env var. Best for CI.
 
 `21st whoami` shows the signed-in account; `21st usage` shows tier + remaining

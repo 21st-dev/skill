@@ -21,7 +21,7 @@ bookmark, and apply it. Under the hood this is one CLI call:
 
 1. **Auth needs a real API key.** `publish-theme` is a management endpoint: it
    accepts a `21st_sk_…` key **only**, not a `21st login` session token. Get one
-   at **https://21st.dev/mcp** (or `/studio/<username>/api-keys`) and pass it via
+   at **https://21st.dev/mcp** (or **https://21st.dev/settings/api-keys**) and pass it via
    `--api-key 21st_sk_…` or the `TWENTYFIRST_TOKEN` / `API_KEY_21ST` env var. If
    the user has no key, point them there — don't try to mint one.
 2. The CLI is the unified `@21st-dev/cli` (bin `21st`). Use `npx @21st-dev/cli`

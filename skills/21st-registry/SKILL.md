@@ -23,7 +23,7 @@ already published, all through the unified `21st` CLI (`@21st-dev/cli`).
 
 1. **Auth needs a real API key.** Publish, edit and delete are management
    endpoints: they accept a `21st_sk_…` key **only**, not a `21st login` session
-   token. Get one at **https://21st.dev/mcp** (or `/studio/<username>/api-keys`)
+   token. Get one at **https://21st.dev/mcp** (or **https://21st.dev/settings/api-keys**)
    and pass it via `--api-key 21st_sk_…` or the `TWENTYFIRST_TOKEN` /
    `API_KEY_21ST` env var. If the user has no key, point them there.
 2. The CLI is the unified `@21st-dev/cli` (bin `21st`). Don't reinvent — use it.
@@ -51,7 +51,7 @@ slug from the filename, tags from imports, demo auto-found or synthesised. In
 | "share with team", "залей нам", default for any unqualified ask | *(none — defaults to `unlisted`)* |
 | "shareable link but not listed" | `--unlisted` |
 | "publish publicly", "make it public on 21st" | `--public` |
-| "restrict to the registry team" | `--private` |
+| "restrict to the team library", "keep it internal" | `--private` |
 
 **Never use `--public` without an explicit "publish publicly".** Public
 components go through admin moderation and appear in the 21st library.
@@ -65,7 +65,7 @@ components go through admin moderation and appear in the 21st library.
 | `--demo <file>` | Demo file. Auto-found (`{Comp}.demo.tsx`, `demos/{slug}.tsx`, `demos/default.tsx`) or a trivial one is synthesised. A real demo gives a much better preview. |
 | `--preview <img>` | Optional static thumbnail (png/jpg/webp); the library also renders a live iframe. |
 | `--registry ui\|hooks\|blocks\|icons` | Target sub-registry (default `ui`). |
-| `--to <registry-slug>` | Target team registry (e.g. `--to default`). Omit for the team's default. |
+| `--to <library-slug>` | Target team library (e.g. `--to default`). Omit for the team's default. |
 | `--registry-dep <ref>` | Repeatable. A shadcn dep by bare name, URL, or `@namespace/name`. |
 | `--public` / `--unlisted` / `--private` | Visibility (default `unlisted`). |
 
